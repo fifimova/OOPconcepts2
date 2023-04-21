@@ -1,16 +1,6 @@
-public class Truck extends MotorVehicle implements ServiceStation {
+public class Truck extends MotorVehicle implements Transport {
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
-    }
-
-    @Override
-    public void updateTyre() {
-        super.updateTyre();
-    }
-
-    @Override
-    public void checkEngine() {
-        super.checkEngine();
     }
 
     public void checkTrailer() {
@@ -18,7 +8,7 @@ public class Truck extends MotorVehicle implements ServiceStation {
     }
 
     @Override
-    public void check() {
+    public void service() {
         System.out.println("Обслуживаем " + getModelName());
         for (int i = 0; i < getWheelsCount(); i++) {
             updateTyre();
